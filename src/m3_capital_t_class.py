@@ -315,7 +315,7 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # ---------------------------------------------------------------------
-        # TODO: 7.
+        # DONE: 7.
         #   READ the above specification, including the Example.
         #   Implement this method, then TEST it by:
         #     a. Un-comment the call to its test function, in main.  Run.
@@ -332,8 +332,7 @@ class CapitalT(object):
         new_height = self.v_rect.get_height()
         new_letter_thickness = self.h_rect.get_height()
         new_rectangle = CapitalT(new_center, new_width, new_height, new_letter_thickness)
-        new_rectangle.fill_color = self.v_rect.fill_color
-        new_rectangle.outline_color = self.v_rect.outline_color
+        new_rectangle.set_colors(self.h_rect.fill_color, self.v_rect.outline_color)
         return new_rectangle
 
 # -----------------------------------------------------------------------------
